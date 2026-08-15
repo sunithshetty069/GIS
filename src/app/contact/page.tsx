@@ -32,7 +32,7 @@ export default function ContactPage() {
             {SERVICE_PILLS.map((pill) => (
               <span
                 key={pill}
-                className="px-4 py-2 rounded-full text-xs sm:text-sm bg-[#FAFBF9] border border-[#F1F3F1] text-[#5A635A]"
+                className="px-4 py-2 rounded-full text-xs sm:text-sm bg-[#FAF8FC] border border-[#F1EBF5] text-[#6B6470]"
               >
                 {pill}
               </span>
@@ -42,13 +42,13 @@ export default function ContactPage() {
       </section>
 
       {/* Form */}
-      <section className="bg-[#FAFBF9] py-20 sm:py-28">
+      <section className="bg-[#FAF8FC] py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="mb-12">
             <h2 className="text-3xl sm:text-4xl tracking-tight font-normal text-black mb-3">
               Let&apos;s Build Something The World Will Notice.
             </h2>
-            <p className="text-[#5A635A] text-base sm:text-lg max-w-xl">
+            <p className="text-[#6B6470] text-base sm:text-lg max-w-xl">
               You found us. That is already the first smart decision. The second is
               starting the conversation.
             </p>
@@ -64,36 +64,36 @@ export default function ContactPage() {
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="grid sm:grid-cols-3 gap-8">
-            <div className="border-t border-[#F1F3F1] pt-6">
-              <p className="text-xs text-[#738273] uppercase tracking-wide mb-2">Email</p>
+            <div className="border-t border-[#F1EBF5] pt-6">
+              <p className="text-xs text-[#9C8FAD] uppercase tracking-wide mb-2">Email</p>
               <a
                 href="mailto:marketing@benchboxmedia.com"
-                className="text-lg text-[#1C2E1E] hover:opacity-60 transition-opacity"
+                className="text-lg text-[#0d0d0d] hover:opacity-60 transition-opacity"
               >
                 marketing@benchboxmedia.com
               </a>
             </div>
-            <div className="border-t border-[#F1F3F1] pt-6">
-              <p className="text-xs text-[#738273] uppercase tracking-wide mb-2">Phone</p>
+            <div className="border-t border-[#F1EBF5] pt-6">
+              <p className="text-xs text-[#9C8FAD] uppercase tracking-wide mb-2">Phone</p>
               <a
                 href="tel:+916361772547"
-                className="text-lg text-[#1C2E1E] hover:opacity-60 transition-opacity"
+                className="text-lg text-[#0d0d0d] hover:opacity-60 transition-opacity"
               >
                 +91 6361 772 547
               </a>
             </div>
-            <div className="border-t border-[#F1F3F1] pt-6">
-              <p className="text-xs text-[#738273] uppercase tracking-wide mb-2">
+            <div className="border-t border-[#F1EBF5] pt-6">
+              <p className="text-xs text-[#9C8FAD] uppercase tracking-wide mb-2">
                 Location
               </p>
-              <p className="text-lg text-[#1C2E1E]">Indiranagar, Bengaluru</p>
+              <p className="text-lg text-[#0d0d0d]">Indiranagar, Bengaluru</p>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* Closing */}
-      <section className="bg-[#1C2E1E] text-white py-24 sm:py-32">
+      <section className="bg-[#0d0d0d] text-white py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-[1.08] mb-4">

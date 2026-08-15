@@ -34,7 +34,7 @@ export default function ServicePills({
       <h3 className="text-2xl font-medium tracking-tight mb-2 text-black">
         What sort of service?
       </h3>
-      <p className="opacity-85 text-[#738273] mb-8">Select all that apply</p>
+      <p className="opacity-85 text-[#9C8FAD] mb-8">Select all that apply</p>
 
       <div className="flex flex-wrap gap-3">
         {SERVICE_OPTIONS.map((option) => {
@@ -48,8 +48,8 @@ export default function ServicePills({
               aria-pressed={active}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm sm:text-base transition-colors ${
                 active
-                  ? "bg-[#1C2E1E] text-white shadow-md shadow-emerald-950/5 transform"
-                  : "bg-white text-[#1C2E1E] border border-[#F1F3F1] hover:bg-[#F1F3F1]/55"
+                  ? "bg-[#0d0d0d] text-white shadow-md shadow-purple-950/10 transform"
+                  : "bg-white text-[#0d0d0d] border border-[#F1EBF5] hover:bg-[#F1EBF5]/55"
               }`}
             >
               <AnimatePresence initial={false}>
@@ -78,7 +78,7 @@ export default function ServicePills({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
-            className="italic text-xs mt-6 text-[#5A635A]"
+            className="italic text-xs mt-6 text-[#6B6470]"
           >
             Please click to select services above.
           </motion.p>
@@ -91,15 +91,15 @@ export default function ServicePills({
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="overflow-hidden mt-6"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#FAFBF9] border border-[#F1F3F1] rounded-2xl px-6 py-5">
-              <p className="text-sm text-[#1C2E1E]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#FAF8FC] border border-[#F1EBF5] rounded-2xl px-6 py-5">
+              <p className="text-sm text-[#0d0d0d]">
                 Ready to inquire about:{" "}
                 <span className="font-medium">{services.join(", ")}</span>
               </p>
               <button
                 type="button"
                 onClick={() => onConfirm?.(services)}
-                className="flex items-center gap-1.5 text-[#4D6D47] uppercase text-xs font-medium tracking-wide hover:opacity-70 transition-opacity shrink-0"
+                className="flex items-center gap-1.5 text-[#8B2FC9] uppercase text-xs font-medium tracking-wide hover:opacity-70 transition-opacity shrink-0"
               >
                 Let&apos;s Go
                 <ArrowRight size={14} />

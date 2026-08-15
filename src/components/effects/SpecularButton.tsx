@@ -17,7 +17,7 @@ export default function SpecularButton({
   tintOpacity = 0,
   textColor = "#ffffff",
   lineColor = "#ffffff",
-  baseColor = "#1C2E1E",
+  baseColor = "#0d0d0d",
   intensity = 1,
   shineSize = 60,
   shineFade = 40,

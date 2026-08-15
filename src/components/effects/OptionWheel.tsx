@@ -12,8 +12,8 @@ const ROW_HEIGHT = 44;
 export default function OptionWheel({
   items,
   defaultSelected = 0,
-  textColor = "#5A635A",
-  activeColor = "#1C2E1E",
+  textColor = "#6B6470",
+  activeColor = "#0d0d0d",
   side = "left",
   fontSize = 1.5,
   spacing = 1.2,

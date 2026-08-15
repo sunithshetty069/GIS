@@ -48,7 +48,7 @@ export default function Navbar() {
             {hovered && (
               <motion.span
                 aria-hidden="true"
-                className="absolute top-1/2 h-10 rounded-full bg-white/40 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] border border-white/50 pointer-events-none -z-10"
+                className="absolute top-1/2 h-10 rounded-full bg-gradient-to-r from-[#8B2FC9]/10 to-[#E91E8C]/10 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] border border-[#8B2FC9]/15 pointer-events-none -z-10"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,

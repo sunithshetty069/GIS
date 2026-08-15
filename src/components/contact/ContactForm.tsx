@@ -17,7 +17,7 @@ const SERVICE_OPTIONS = [
 ];
 
 const fieldClasses =
-  "w-full bg-white border border-[#F1F3F1] rounded-xl px-5 py-3.5 text-sm sm:text-base text-black placeholder:text-[#5A635A]/60 focus:outline-none focus:border-[#4D6D47] transition-colors";
+  "w-full bg-white border border-[#F1EBF5] rounded-xl px-5 py-3.5 text-sm sm:text-base text-black placeholder:text-[#6B6470]/60 focus:outline-none focus:border-[#8B2FC9] transition-colors";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -37,12 +37,12 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#FAFBF9] border border-[#F1F3F1] rounded-2xl px-8 py-14 text-center"
+            className="bg-[#FAF8FC] border border-[#F1EBF5] rounded-2xl px-8 py-14 text-center"
           >
             <p className="text-2xl sm:text-3xl tracking-tight text-black mb-3">
               Message sent.
             </p>
-            <p className="text-[#5A635A] max-w-md mx-auto">
+            <p className="text-[#6B6470] max-w-md mx-auto">
               Thank you for reaching out. Someone from Benchbox will get back to you
               shortly.
             </p>
@@ -83,7 +83,7 @@ export default function ContactForm() {
               name="service"
               defaultValue=""
               required
-              className={`${fieldClasses} sm:col-span-2 text-[#5A635A]`}
+              className={`${fieldClasses} sm:col-span-2 text-[#6B6470]`}
             >
               <option value="" disabled>
                 Service needed
@@ -107,7 +107,7 @@ export default function ContactForm() {
               <SpecularButton
                 type="submit"
                 size="lg"
-                baseColor="#1C2E1E"
+                baseColor="#0d0d0d"
                 textColor="#ffffff"
                 lineColor="#ffffff"
                 intensity={0.9}

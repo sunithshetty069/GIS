@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { CtaButton } from "@/components/CtaButton";
 import BlurText from "@/components/effects/BlurText";
+import GsapReveal from "@/components/effects/GsapReveal";
 
 export const metadata: Metadata = {
   title: "About",
@@ -43,10 +44,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#FAFBF9] py-16 sm:py-24">
+      <section className="bg-[#FAF8FC] py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
-            <Reveal className="text-[#5A635A] text-base sm:text-lg leading-relaxed space-y-5">
+            <Reveal className="text-[#6B6470] text-base sm:text-lg leading-relaxed space-y-5">
               <p>
                 The best brands in the world do not have five agencies. They have one team
                 that understands everything. That is a rare thing to find. We built Benchbox
@@ -57,7 +58,7 @@ export default function AboutPage() {
                 We hold it together ourselves.
               </p>
             </Reveal>
-            <Reveal delay={0.1} className="text-[#5A635A] text-base sm:text-lg leading-relaxed space-y-5">
+            <Reveal delay={0.1} className="text-[#6B6470] text-base sm:text-lg leading-relaxed space-y-5">
               <p>
                 From the first idea to the last impression, strategy, identity, content,
                 performance, presence, it moves as one. Because it is made by one.
@@ -80,24 +81,22 @@ export default function AboutPage() {
             </h2>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 gap-x-10">
-            {DIFFERENTIATORS.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.08}>
-                <div className="py-8 border-t border-[#F1F3F1]">
-                  <p className="text-xl sm:text-2xl tracking-tight text-black mb-3">
-                    {item.title}
-                  </p>
-                  <p className="text-sm sm:text-base text-[#5A635A] leading-relaxed max-w-md">
-                    {item.desc}
-                  </p>
-                </div>
-              </Reveal>
+          <GsapReveal className="grid sm:grid-cols-2 gap-x-10" stagger={0.08}>
+            {DIFFERENTIATORS.map((item) => (
+              <div key={item.title} className="py-8 border-t border-[#F1EBF5]">
+                <p className="text-xl sm:text-2xl tracking-tight text-black mb-3">
+                  {item.title}
+                </p>
+                <p className="text-sm sm:text-base text-[#6B6470] leading-relaxed max-w-md">
+                  {item.desc}
+                </p>
+              </div>
             ))}
-          </div>
+          </GsapReveal>
         </div>
       </section>
 
-      <section className="bg-[#1C2E1E] text-white py-24 sm:py-32">
+      <section className="bg-[#0d0d0d] text-white py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight font-normal leading-[1.15] mb-3 max-w-2xl mx-auto">

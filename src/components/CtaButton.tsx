@@ -16,8 +16,8 @@ export function CtaButton({
     "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm sm:text-base font-medium tracking-tight transition-all duration-300";
   const styles =
     variant === "solid"
-      ? "bg-[#1C2E1E] text-white hover:bg-[#25412a] shadow-md shadow-emerald-950/5"
-      : "bg-white text-[#1C2E1E] border border-[#1C2E1E]/15 hover:bg-[#F1F3F1]/70";
+      ? "bg-[#0d0d0d] text-white hover:bg-[#25412a] shadow-md shadow-purple-950/10"
+      : "bg-white text-[#0d0d0d] border border-[#0d0d0d]/15 hover:bg-[#F1EBF5]/70";
 
   return (
     <Link href={href} className={`${base} ${styles} ${className}`}>
@@ -38,7 +38,7 @@ export function ArrowLink({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-1.5 text-[#1C2E1E] font-medium tracking-tight hover:opacity-60 transition-opacity ${className}`}
+      className={`inline-flex items-center gap-1.5 text-[#0d0d0d] font-medium tracking-tight hover:opacity-60 transition-opacity ${className}`}
     >
       {children}
     </Link>

@@ -3,18 +3,7 @@ import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import { ArrowLink, CtaButton } from "@/components/CtaButton";
 import CurvedLoop from "@/components/effects/CurvedLoop";
-
-const MARQUEE_ITEMS = [
-  "The Mark",
-  "The Signal",
-  "The Space",
-  "The Frame",
-  "The Voice",
-  "The Stage",
-  "The Noise",
-  "The Presence",
-  "One Desk",
-];
+import GsapReveal from "@/components/effects/GsapReveal";
 
 const STATS = [
   { value: "6+", label: "Years in the Game" },
@@ -80,26 +69,26 @@ export default function Home() {
     <>
       <Hero />
 
-      <Marquee items={MARQUEE_ITEMS} />
+      <Marquee items={CLIENTS} />
 
       {/* Stats */}
       <section className="bg-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8">
-            {STATS.map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.08}>
-                <p className="text-4xl sm:text-5xl tracking-tight font-normal text-[#1C2E1E] mb-2">
+          <GsapReveal className="grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8" stagger={0.1}>
+            {STATS.map((stat) => (
+              <div key={stat.label}>
+                <p className="text-4xl sm:text-5xl tracking-tight font-normal text-[#0d0d0d] mb-2">
                   {stat.value}
                 </p>
-                <p className="text-sm sm:text-base text-[#5A635A]">{stat.label}</p>
-              </Reveal>
+                <p className="text-sm sm:text-base text-[#6B6470]">{stat.label}</p>
+              </div>
             ))}
-          </div>
+          </GsapReveal>
         </div>
       </section>
 
       {/* About snippet */}
-      <section className="bg-[#FAFBF9] py-20 sm:py-28">
+      <section className="bg-[#FAF8FC] py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <Reveal>
@@ -109,7 +98,7 @@ export default function Home() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="text-[#5A635A] text-base sm:text-lg leading-relaxed space-y-5">
+              <div className="text-[#6B6470] text-base sm:text-lg leading-relaxed space-y-5">
                 <p>
                   The best brands in the world do not have five agencies. They have one
                   team that understands everything. That is a rare thing to find. We built
@@ -140,21 +129,22 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 gap-x-10">
-            {SERVICES.map((service, i) => (
-              <Reveal key={service.num} delay={(i % 4) * 0.06}>
-                <div className="flex items-baseline gap-5 py-6 border-t border-[#F1F3F1]">
-                  <span className="text-sm text-[#738273] tabular-nums">{service.num}</span>
-                  <div>
-                    <p className="text-xl sm:text-2xl tracking-tight text-black mb-1">
-                      {service.name}
-                    </p>
-                    <p className="text-sm sm:text-base text-[#5A635A]">{service.desc}</p>
-                  </div>
+          <GsapReveal className="grid sm:grid-cols-2 gap-x-10" stagger={0.06}>
+            {SERVICES.map((service) => (
+              <div
+                key={service.num}
+                className="flex items-baseline gap-5 py-6 border-t border-[#F1EBF5]"
+              >
+                <span className="text-sm text-[#9C8FAD] tabular-nums">{service.num}</span>
+                <div>
+                  <p className="text-xl sm:text-2xl tracking-tight text-black mb-1">
+                    {service.name}
+                  </p>
+                  <p className="text-sm sm:text-base text-[#6B6470]">{service.desc}</p>
                 </div>
-              </Reveal>
+              </div>
             ))}
-          </div>
+          </GsapReveal>
 
           <Reveal delay={0.1} className="mt-10">
             <ArrowLink href="/services">
@@ -165,10 +155,10 @@ export default function Home() {
       </section>
 
       {/* One Desk */}
-      <section id="one-desk" className="bg-[#1C2E1E] text-white py-20 sm:py-28 scroll-mt-24">
+      <section id="one-desk" className="bg-[#0d0d0d] text-white py-20 sm:py-28 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal>
-            <p className="text-[#a8b8a3] text-xs uppercase tracking-wide mb-4">
+            <p className="text-[#d9a6e8] text-xs uppercase tracking-wide mb-4">
               ★ Flagship Product
             </p>
             <h2 className="text-4xl sm:text-5xl tracking-tight font-normal leading-[1.08] mb-6">
@@ -222,7 +212,7 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl tracking-tight font-normal leading-[1.08] text-black mb-4">
               Work That Moves the Needle.
             </h2>
-            <p className="text-[#5A635A] text-base sm:text-lg mb-10">
+            <p className="text-[#6B6470] text-base sm:text-lg mb-10">
               Brand Films &middot; Designs &middot; Websites &middot; Campaigns
             </p>
             <ArrowLink href="/work">
@@ -233,17 +223,17 @@ export default function Home() {
       </section>
 
       {/* Curved drag marquee */}
-      <div className="bg-white text-[#1C2E1E] h-[26vw] max-h-64 min-h-40 overflow-hidden">
+      <div className="bg-white text-[#0d0d0d] h-[26vw] max-h-64 min-h-40 overflow-hidden">
         <CurvedLoop
           marqueeText="You Name It ✦ We Do It ✦ "
           speed={1.4}
           curveAmount={260}
-          className="fill-[#1C2E1E]"
+          className="fill-[#8B2FC9]"
         />
       </div>
 
       {/* Clients */}
-      <section className="bg-[#F1F3F1] py-20 sm:py-28">
+      <section className="bg-[#F1EBF5] py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal className="mb-12">
             <h2 className="text-3xl sm:text-4xl tracking-tight font-normal text-black">
@@ -255,7 +245,7 @@ export default function Home() {
               {CLIENTS.map((client) => (
                 <span
                   key={client}
-                  className="text-base sm:text-lg text-[#1C2E1E]/70 px-4 py-2 bg-white rounded-full"
+                  className="text-base sm:text-lg text-[#0d0d0d]/70 px-4 py-2 bg-white rounded-full"
                 >
                   {client}
                 </span>
@@ -272,10 +262,10 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight font-normal leading-[1.08] text-black mb-4">
               Were You Looking for Us?
             </h2>
-            <p className="text-lg sm:text-xl text-[#5A635A] mb-10">
+            <p className="text-lg sm:text-xl text-[#6B6470] mb-10">
               You found us. Let us get to work.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 text-[#1C2E1E]">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 text-[#0d0d0d]">
               <a
                 href="mailto:marketing@benchboxmedia.com"
                 className="hover:opacity-60 transition-opacity"

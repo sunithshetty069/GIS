@@ -57,8 +57,8 @@ export default function WorkTabs() {
               aria-pressed={isActive}
               className={`px-5 py-2.5 rounded-full text-sm sm:text-base transition-colors ${
                 isActive
-                  ? "bg-[#1C2E1E] text-white shadow-md shadow-emerald-950/5"
-                  : "bg-white text-[#1C2E1E] border border-[#F1F3F1] hover:bg-[#F1F3F1]/55"
+                  ? "bg-[#0d0d0d] text-white shadow-md shadow-purple-950/10"
+                  : "bg-white text-[#0d0d0d] border border-[#F1EBF5] hover:bg-[#F1EBF5]/55"
               }`}
             >
               {cat.label}
@@ -79,12 +79,12 @@ export default function WorkTabs() {
           {CATEGORIES[active].projects.map((project) => (
             <div
               key={project.title}
-              className="bg-[#FAFBF9] border border-[#F1F3F1] rounded-2xl p-8 aspect-[4/3] flex flex-col justify-end hover:bg-[#F1F3F1]/60 transition-colors"
+              className="bg-[#FAF8FC] border border-[#F1EBF5] rounded-2xl p-8 aspect-[4/3] flex flex-col justify-end hover:bg-[#F1EBF5]/60 transition-colors"
             >
               <p className="text-xl sm:text-2xl tracking-tight text-black mb-1">
                 {project.title}
               </p>
-              <p className="text-sm text-[#5A635A]">{project.subtitle}</p>
+              <p className="text-sm text-[#6B6470]">{project.subtitle}</p>
             </div>
           ))}
         </motion.div>

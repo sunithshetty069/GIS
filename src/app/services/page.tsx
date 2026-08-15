@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import { CtaButton } from "@/components/CtaButton";
 import BlurText from "@/components/effects/BlurText";
 import ServiceQuickNav from "@/components/services/ServiceQuickNav";
+import GsapReveal from "@/components/effects/GsapReveal";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -122,7 +123,7 @@ export default function ServicesPage() {
             delay={70}
           />
           <Reveal delay={0.2}>
-            <p className="text-lg sm:text-xl text-[#5A635A] leading-relaxed max-w-2xl mb-12">
+            <p className="text-lg sm:text-xl text-[#6B6470] leading-relaxed max-w-2xl mb-12">
               Eight specialisations. One team. Every single thing your brand needs to grow,
               stand out and stay impossible to ignore.
             </p>
@@ -135,14 +136,14 @@ export default function ServicesPage() {
         <section
           key={service.num}
           id={`service-${service.num}`}
-          className={`scroll-mt-24 ${i % 2 === 0 ? "bg-[#FAFBF9]" : "bg-white"}`}
+          className={`scroll-mt-24 ${i % 2 === 0 ? "bg-[#FAF8FC]" : "bg-white"}`}
         >
-          <div className="max-w-7xl mx-auto px-6 py-14 sm:py-16 border-t border-[#F1F3F1]">
+          <div className="max-w-7xl mx-auto px-6 py-14 sm:py-16 border-t border-[#F1EBF5]">
             <Reveal>
               <div className="grid lg:grid-cols-[auto_1fr] gap-6 lg:gap-16 items-start">
                 <div className="flex items-baseline gap-4 lg:flex-col lg:gap-2 shrink-0">
-                  <span className="text-sm text-[#738273] tabular-nums">{service.num}</span>
-                  <p className="text-sm text-[#4D6D47] uppercase tracking-wide">
+                  <span className="text-sm text-[#9C8FAD] tabular-nums">{service.num}</span>
+                  <p className="text-sm text-[#8B2FC9] uppercase tracking-wide">
                     {service.key}
                   </p>
                 </div>
@@ -151,20 +152,26 @@ export default function ServicesPage() {
                   <h2 className="text-3xl sm:text-4xl tracking-tight font-normal text-black mb-5">
                     {service.title}
                   </h2>
-                  <p className="text-base sm:text-lg text-[#5A635A] leading-relaxed max-w-2xl mb-8">
+                  <p className="text-base sm:text-lg text-[#6B6470] leading-relaxed max-w-2xl mb-8">
                     {service.desc}
                   </p>
-                  <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                  <GsapReveal
+                    as="ul"
+                    className="grid sm:grid-cols-2 gap-x-8 gap-y-3"
+                    stagger={0.05}
+                    y={10}
+                    start="top 92%"
+                  >
                     {service.bullets.map((bullet) => (
                       <li
                         key={bullet}
-                        className="flex items-center gap-3 text-sm sm:text-base text-[#1C2E1E]"
+                        className="flex items-center gap-3 text-sm sm:text-base text-[#0d0d0d]"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#4D6D47] shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#8B2FC9] shrink-0" />
                         {bullet}
                       </li>
                     ))}
-                  </ul>
+                  </GsapReveal>
                 </div>
               </div>
             </Reveal>
@@ -172,7 +179,7 @@ export default function ServicesPage() {
         </section>
       ))}
 
-      <section className="bg-[#1C2E1E] text-white py-20 sm:py-28">
+      <section className="bg-[#0d0d0d] text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl tracking-tight font-normal leading-[1.1] mb-3">

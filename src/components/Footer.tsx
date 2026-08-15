@@ -11,7 +11,7 @@ const NAV_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 bg-[#1C2E1E] text-white">
+    <footer className="relative z-10 bg-[#0d0d0d] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 sm:py-20">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-14">
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white text-[#1C2E1E] px-7 py-3.5 text-sm sm:text-base font-medium tracking-tight hover:bg-[#F1F3F1] transition-colors w-fit"
+            className="inline-flex items-center gap-2 rounded-full bg-white text-[#0d0d0d] px-7 py-3.5 text-sm sm:text-base font-medium tracking-tight hover:bg-[#F1EBF5] transition-colors w-fit"
           >
             Start a Project
           </Link>

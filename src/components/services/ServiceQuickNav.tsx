@@ -13,14 +13,14 @@ export default function ServiceQuickNav({ items }: { items: string[] }) {
 
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
-      <p className="text-xs uppercase tracking-wide text-[#738273] shrink-0">
+      <p className="text-xs uppercase tracking-wide text-[#9C8FAD] shrink-0">
         Scroll to jump
       </p>
       <OptionWheel
         items={items}
         defaultSelected={0}
-        textColor="#5A635A"
-        activeColor="#1C2E1E"
+        textColor="#6B6470"
+        activeColor="#0d0d0d"
         side="left"
         fontSize={1.6}
         spacing={1.1}

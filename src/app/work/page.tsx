@@ -23,14 +23,14 @@ export default function WorkPage() {
             delay={70}
           />
           <Reveal delay={0.2}>
-            <p className="text-lg sm:text-xl text-[#5A635A] leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-[#6B6470] leading-relaxed max-w-2xl">
               Six years. Every sector. Here is proof of what we are capable of.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <div className="bg-[#1C2E1E] text-white py-8 sm:py-10 overflow-hidden">
+      <div className="bg-[#0d0d0d] text-white py-8 sm:py-10 overflow-hidden">
         <ScrollVelocity
           texts={["BRAND FILMS · DESIGNS · ", "WEBSITES · CAMPAIGNS · "]}
           velocity={40}
