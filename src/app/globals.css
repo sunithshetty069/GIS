@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c2e1e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-blink {
+    animation: none;
+  }
+}
+
+.curved-loop-jacket {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 22;
+  overflow: visible;
+  display: block;
+  font-size: 4rem;
+  fill: currentColor;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .curved-loop-svg {
+    font-size: 6rem;
+  }
+}
+
+.sv-parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.sv-scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sv-scroller span {
+  flex-shrink: 0;
+}
