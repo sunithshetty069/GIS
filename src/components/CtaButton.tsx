@@ -16,7 +16,7 @@ export function CtaButton({
     "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm sm:text-base font-medium tracking-tight transition-all duration-300";
   const styles =
     variant === "solid"
-      ? "bg-[#0d0d0d] text-white hover:bg-[#25412a] shadow-md shadow-purple-950/10"
+      ? "bg-[#0d0d0d] text-white hover:bg-[#2b0e3d] shadow-md shadow-purple-950/10"
       : "bg-white text-[#0d0d0d] border border-[#0d0d0d]/15 hover:bg-[#F1EBF5]/70";
 
   return (
